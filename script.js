@@ -79,9 +79,16 @@ function addWaitingTask() {
 // if waiting task are there add to task
 function checkWaiting(container) {
   if (serverToBeRemoved > 0) {
-    container.remove();
-    serverToBeRemoved--;
-    document.getElementById("serverToBeRemoved").innerText = serverToBeRemoved;
+    let innerContaner1 = document.getElementById("inner-container1").children;
+
+    if (innerContaner1.length > 1) {
+      container.remove();
+      serverToBeRemoved--;
+      document.getElementById("serverToBeRemoved").innerText =
+        serverToBeRemoved;
+    } else {
+      document.getElementById("serverToBeRemoved").innerText = 0;
+    }
 
     return;
   }
