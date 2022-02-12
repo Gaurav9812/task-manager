@@ -32,7 +32,7 @@ document.getElementById("removeServer").addEventListener("click", function (e) {
       return;
     }
   }
-  if (innerContaner1.length > 1) {
+  if (innerContaner1.length > 1 && serverToBeRemoved < servers) {
     serverToBeRemoved++;
 
     document.getElementById("serverToBeRemoved").innerText = serverToBeRemoved;
