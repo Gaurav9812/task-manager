@@ -1,14 +1,19 @@
 let serverToBeRemoved = 0;
 let waitingTask = 0;
-
+let servers = 4;
 //to add a server
 document.getElementById("addServer").addEventListener("click", function (e) {
   e.preventDefault();
-  let newServer = document.createElement("div");
-  newServer.classList.add("server");
-  let innerContaner1 = document.getElementById("inner-container1");
-  innerContaner1.appendChild(newServer);
-  checkWaiting(newServer);
+  if (servers < 10) {
+    let newServer = document.createElement("div");
+    newServer.classList.add("server");
+    let innerContaner1 = document.getElementById("inner-container1");
+    innerContaner1.appendChild(newServer);
+    servers++;
+    document.getElementById("server").innerText = servers;
+    console.log(servers);
+    checkWaiting(newServer);
+  }
 });
 
 //to remove server
@@ -21,6 +26,9 @@ document.getElementById("removeServer").addEventListener("click", function (e) {
     if (innerContaner1[i].children.length != 1) {
       console.log("i ", i);
       innerContaner1[i].remove();
+      servers--;
+      document.getElementById("server").innerText = servers;
+
       return;
     }
   }
@@ -86,6 +94,7 @@ function checkWaiting(container) {
       serverToBeRemoved--;
       document.getElementById("serverToBeRemoved").innerText =
         serverToBeRemoved;
+
       return;
     } else {
       document.getElementById("serverToBeRemoved").innerText = 0;
