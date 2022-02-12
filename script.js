@@ -34,6 +34,7 @@ document.getElementById("removeServer").addEventListener("click", function (e) {
   }
   if (innerContaner1.length > 1) {
     serverToBeRemoved++;
+
     document.getElementById("serverToBeRemoved").innerText = serverToBeRemoved;
   }
 });
@@ -94,6 +95,8 @@ function checkWaiting(container) {
       serverToBeRemoved--;
       document.getElementById("serverToBeRemoved").innerText =
         serverToBeRemoved;
+      servers--;
+      document.getElementById("server").innerText = servers;
 
       return;
     } else {
