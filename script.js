@@ -86,11 +86,10 @@ function checkWaiting(container) {
       serverToBeRemoved--;
       document.getElementById("serverToBeRemoved").innerText =
         serverToBeRemoved;
+      return;
     } else {
       document.getElementById("serverToBeRemoved").innerText = 0;
     }
-
-    return;
   }
   if (waitingTask > 0) {
     waitingTask--;

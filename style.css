@@ -93,6 +93,7 @@ body {
   background: purple;
   opacity: 0.6;
   color: white;
+  cursor: pointer;
 }
 #removeServer {
   height: 2.2rem;
@@ -100,6 +101,7 @@ body {
   border-radius: 7px;
   border: 2px solid purple;
   background: white;
+  cursor: pointer;
 }
 #numTask {
   width: 8rem;
@@ -116,5 +118,7 @@ body {
   border: 0;
   border-radius: 8px;
   color: white;
+  cursor: pointer;
+
   padding: 0.5rem 1rem;
 }
