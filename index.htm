@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="outer-container">
+      <div id="inner-container1">
+        <div class="server">
+          <!-- <div class="task">
+            <div class="fill"></div>
+          </div> -->
+        </div>
+        <div class="server">
+          <!-- <div class="task">
+            <div class="fill"></div>
+          </div> -->
+        </div>
+        <div class="server">
+          <!-- <div class="task">
+            <div class="fill"></div>
+          </div> -->
+        </div>
+        <div class="server">
+          <!-- <div class="task">
+            <div class="fill"></div>
+          </div> -->
+        </div>
+      </div>
+      <div class="inner-container" id="inner-container2">
+        <!-- <div class="waiting-task">
+          <div class="wait">waiting ....</div>
+          <button>
+            <i class="fa-solid fa-trash-can trash-icon"></i>
+          </button>
+        </div>
+        <div class="waiting-task">
+          <div class="wait">waiting ....</div>
+          <button>
+            <i class="fa-solid fa-trash-can trash-icon"></i>
+          </button>
+        </div> -->
+      </div>
+
+      <div class="inner-container">
+        <div id="server-btns">
+          <button id="addServer">Add a server</button>
+          <button id="removeServer">Remove a server</button>
+        </div>
+        <div style="padding: 1rem">
+          Server To Be Removed :<span id="serverToBeRemoved">0</span>
+        </div>
+        <div style="padding: 1rem">
+          <input type="number" id="numTask" />
+          <button id="addTask">Add Task</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
